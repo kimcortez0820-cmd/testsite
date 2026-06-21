@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DANCE 🩰</title>
+    <style>
+        body {
+            background-color: #ffeef2;
+            font-family: "Georgia", serif;
+            border: 15px double #fff;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 40px 20px;
+        }
+
+        .intro-container {
+            text-align: center;
+            background-color: #fff0f5;
+            padding: 40px;
+            border-radius: 12px;
+            border: 6px dashed #fff;
+            outline: 8px solid #ffccd5;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+            position: relative;
+            max-width: 550px;
+            animation: floatAnimation 4s ease-in-out infinite;
+        }
+
+        .intro-container::before {
+            content: "🩰";
+            font-size: 50px;
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h1 {
+            color: #ff85a2;
+            font-size: 26px;
+            font-style: italic;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 0px #fff;
+        }
+
+        .dance-bio {
+            color: #7a5259;
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: normal;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            text-align: left;
+        }
+
+        li {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #b36b77;
+            background-color: #fff;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px dashed #ffccd5;
+            opacity: 0;
+            transform: translateY(15px);
+            animation: slideUpIn 0.6s ease-out forwards;
+        }
+
+        li:nth-child(1) { animation-delay: 0.3s; }
+        li:nth-child(2) { animation-delay: 0.6s; }
+        li:nth-child(3) { animation-delay: 0.9s; }
+        li:nth-child(4) { animation-delay: 1.2s; }
+
+        b {
+            color: #ff5c8a;
+        }
+
+        .enter-btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #ffccd5;
+            color: #b36b77;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 20px;
+            border: 2px dashed #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .enter-btn:hover {
+            background-color: #ff85a2;
+            color: white;
+            transform: scale(1.05);
+        }
+
+         @keyframes floatAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes slideUpIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blinkImage {
+            0%, 100% {
+                opacity: 1;
+            }
+            45%, 55% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="intro-container">
+
+        <h1>Welcome to my DANCE Page! 💃</h1>
+
+        <p class="dance-bio">
+            I am Kimberly V. Cortez, a passionate dancer who loves to express myself through movement and rhythm. 
+            Dance is not just a hobby for me; it's a way of life that brings joy, creativity, and discipline into my daily routine. 🩰
+        </p>
+        
+        <h1>My Dance Competitions:</h1>
+        
+        <ul>
+            <li>📅 <b>October 2024</b> - 85th Founding Anniversary of Quezon City's Tayo ang QC: Interpretative Dance Contest — <b>1st RUNNER UP 🥇</b></li>
+            <li>📅 <b>February 2025</b> - Division Festival of Talents — <b>3rd RUNNER UP 🥉</b></li>
+            <li>📅 <b>March 2025</b> - National Dance Championship — <b>CHAMPION 🏆</b></li>
+            <li>📅 <b>October 2025</b> - Bayle sa Kalye — <b>3rd RUNNER UP 🥉</b></li>  
+        </ul>
+
+        <a href="abtme.html" class="enter-btn">🎀 SPLASH! </a>
+
+    </div>
+
+</body>
+</html>

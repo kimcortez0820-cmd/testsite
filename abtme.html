@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website - About Me</title>
+    <style>
+        body {
+            background-color: #ffeef2;
+            font-family: "Georgia", serif;
+            border: 15px double #fff;
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+            
+        main {
+            width: 650px; 
+            height: auto;
+            background-color: #fff0f5;
+            color: #b36b77;
+            padding: 40px;
+            border-radius: 12px;
+            position: relative;
+            
+            border: 6px dashed #fff;
+            outline: 8px solid #ffccd5;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+            animation: floatAnimation 4s ease-in-out infinite;
+        }
+
+        main::before {
+            content: "❤";
+            font-size: 50px;
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+            color: #ff85a2;
+        }
+
+        h1 {
+            margin-top: 15px;
+            color: #ff85a2;
+            text-align: center;
+            font-size: 32px;
+            font-style: italic;
+            text-shadow: 1px 1px 0px #fff, 2px 2px 0px #ffccd5;
+        }
+
+        h2 {
+            color: #d17a8c;
+            text-align: center;
+            font-size: 22px;
+            border-bottom: 1px dashed #ffccd5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        li {
+            font-size: 20px;
+            line-height: 2.2;
+            color: #7a5259;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: slideUpIn 0.5s ease-out forwards;
+        }
+
+        li:nth-child(1) { animation-delay: 0.2s; }
+        li:nth-child(2) { animation-delay: 0.4s; }
+        li:nth-child(3) { animation-delay: 0.6s; }
+        li:nth-child(4) { animation-delay: 0.8s; }
+
+        li i {
+            color: #d17a8c;
+            font-weight: normal;
+            margin-right: 5px;
+        }
+
+        b {
+            color: #ff5c8a;
+            font-weight: bold;
+        }
+
+        .enter-btn {
+            display: inline-block;
+            color: #ff5c8a;
+            text-decoration: none;
+            border-bottom: 2px dotted #ff85a2;
+            font-weight: bold;
+            padding: 2px 5px;
+            transition: all 0.3s ease;
+        }
+
+        .enter-btn:hover {
+            background-color: #ffccd5;
+            border-radius: 5px;
+            color: white;
+            transform: scale(1.08);
+        }
+
+        .back-btn {
+            display: block;
+            width: max-content;
+            margin: 20px auto 0 auto;
+            text-decoration: none;
+            background-color: #ffccd5;
+            color: #b36b77;
+            padding: 10px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 15px;
+            border: 2px dashed #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #ff85a2;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .pic-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px auto;
+        }
+
+        .profile-pic {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            border: 4px solid #fff;
+            outline: 3px dashed #ffccd5;
+            border-radius: 8px;
+            box-shadow: 3px 3px 10px rgba(255, 182, 193, 0.4);
+        }
+
+        .pic-top {
+            animation: blinkImage 3s infinite ease-in-out;
+        }
+
+        @keyframes floatAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes blinkImage {
+            0%, 100% {
+                opacity: 1;
+            }
+            45%, 55% {
+                opacity: 0;
+            }
+        }
+        @keyframes slideUpIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        
+        <aside></aside>
+
+        <main>
+            <div class="pic-container">
+                <img src="picture 1.jpg" alt="Kimberly V. Cortez" class="profile-pic">
+                <img src="picture 2.jpg" alt="Kimberly" class="profile-pic pic-top">
+            </div>
+
+            <h1><b><i>Kimberly V. Cortez</i></b></h1>
+            <h2>ABOUT ME! 😺</h2>
+
+            <ul>
+                <li><i>NAME:</i> <b>Kimberly V. Cortez</b></li>
+                <li><i>BIRTHDATE:</i> August 20, 2011</li>
+                <li><i>AGE:</i> 14 years old</li>
+                <li><i>SPECIALIZATION:</i> <a href="dance.html" class="enter-btn"><b>DANCE 🩰</b></a></li>
+            </ul>
+
+            <a href="main.html" class="back-btn">🎀 SPLASH!</a>
+        </main>
+    
+    </div>
+
+</body>
+</html>

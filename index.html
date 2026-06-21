@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to my World</title>
+    <style>
+    body {
+        background-color: #ffeef2;
+        font-family: "Georgia", serif;
+        border: 15px double #fff;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .intro-container {
+        text-align: center;
+        background-color: #fff0f5;
+        padding: 40px;
+        border-radius: 12px;
+        border: 6px dashed #fff;
+        outline: 8px solid #ffccd5;
+        box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+        position: relative;
+        max-width: 400px;
+        animation: floatAnimation 4s ease-in-out infinite;
+    }
+
+    .intro-container::before {
+        content: "🎀";
+        font-size: 50px;
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        color: #ff85a2;
+        font-size: 24px;
+        font-style: italic;
+        margin-bottom: 25px;
+        text-shadow: 1px 1px 0px #fff;
+    }
+
+    .blinkie-display {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 30px;
+        background: #fff;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: 2px dotted #ffccd5;
+    }
+
+    .blinkie-display img {
+        height: 20px;
+    }
+
+    .enter-btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #ffccd5;
+        color: #b36b77;
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 20px;
+        border: 2px dashed #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        animation: pulseAnimation 2s infinite ease-in-out;
+    }
+
+    .enter-btn:hover {
+        background-color: #ff85a2;
+        color: white;
+        transform: scale(1.05);
+        animation-play-state: paused; 
+    }
+
+    @keyframes floatAnimation {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes pulseAnimation {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 4px 10px rgba(255, 133, 162, 0.2);
+        }
+        50% {
+            transform: scale(1.04);
+            box-shadow: 0 6px 20px rgba(255, 133, 162, 0.5);
+        }
+    }
+</style>
+</head>
+<body>
+
+    <div class="intro-container">
+        <h1>~ Welcome to Kimberly's Space ~</h1>
+        
+        <div class="blinkie-display">
+            <img src="blinkiesCafe-4r.gif" alt="blinkie">
+            <img src="blinkiesCafe-r7.gif" alt="blinkie"> 
+        </div>
+
+        <a href="main.html" class="enter-btn">🎀 Enter Page 🩰</a>
+    </div>
+
+</body>
+</html>
